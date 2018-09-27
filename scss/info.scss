@@ -1,7 +1,6 @@
-.info {
-    &-grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+.info-list {
+    display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         grid-gap: 3rem;
 
         width: 70%;
@@ -10,14 +9,16 @@
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 5rem;
-        border: 3px solid var(--color-primary-yellow);
+        //border: 3px solid var(--color-primary-yellow);
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 1rem 1rem 3rem rgba(211, 211, 211, 0.2);
+        color: black;
+        font-weight: 400;
         border-radius: 5px;
-    }
 
-    &-item {
-        width: 100%;
-        height: 10rem;
-        background-color: orangered;
-    }
+    &__item {
+        list-style: none;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }    
 }
-    

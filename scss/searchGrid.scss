@@ -1,4 +1,5 @@
 .search-list {
+    
     width: 80%;
     position: absolute;
     top: 50%;
@@ -9,7 +10,7 @@
     grid-column-gap: 3rem;
     grid-row-gap: 2rem;
     transition: all .7s .3s;
-    
+    //display: none; //test
 
     &__item {
         list-style: none;
@@ -73,6 +74,7 @@
 }
 
 .search-header {
+    
     display: block;
     width: 100%;
     text-align: center;
@@ -86,6 +88,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     transition: all .7s;
+    //display: none; //test
 
     &::after {
         content: '';

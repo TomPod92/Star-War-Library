@@ -1,7 +1,7 @@
 const option1 = document.querySelector('#film');
 const searchGrid = document.querySelector('.search-list');
 const searchHeader = document.querySelector('.search-header');
-//const infoGrid = document.querySelector('.info-grid-container');
+const info = document.querySelector('.info-list');
 
 // ------------Shift search options to the top and hide the header------------
 const slideSearchBar = () => {
@@ -10,35 +10,32 @@ const slideSearchBar = () => {
 };
 
 // ---------------Display information for specfic search result---------------
-const displayResults = () => {
+const displayResults = (object) => {
 
+
+    for (let key in object ) {
+        if(key === 'created' ||  key === 'edited' || key === 'url') continue;
+        let markup = `<li class="info-list__item">${key}: ${object[key]}</li>`;
+        info.insertAdjacentHTML('beforeend', markup);
+    }
 };
 
-option1.addEventListener('click', getResults );
+
 
 
 // ---------------------------Get results from SWAPI---------------------------
 async function getResults() {
     try {
-        console.log('it works1');
         slideSearchBar();
-        console.log('it works2');
         const result = await axios('https://swapi.co/api/people/1/');
-        console.log('it works3');
         console.log(result.data);
-        const arrayKeys = Object.keys(result.data);
-        console.log(arrayKeys);
-        console.log(arrayKeys[0]);
-
-        for (let i = 0 ; i < arrayKeys.length ; i++) {
-            let key = arrayKeys[i];
-
-            console.log(result.data.key);
-            console.log(arrayKeys[i]);
-        }
-        
+        displayResults(result.data);   
+   
     } catch (error) {
         console.log(error);
     }
     
 }
+
+// --------------------------Event listiners---------------------------
+option1.addEventListener('click', getResults );
