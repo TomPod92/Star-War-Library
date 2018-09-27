@@ -1,7 +1,7 @@
-const option1 = document.querySelector('.search-option--1');
-const searchGrid = document.querySelector('.search-grid-container');
+const option1 = document.querySelector('#film');
+const searchGrid = document.querySelector('.search-list');
 const searchHeader = document.querySelector('.search-header');
-const infoGrid = document.querySelector('.info-grid-container');
+//const infoGrid = document.querySelector('.info-grid-container');
 
 // ------------Shift search options to the top and hide the header------------
 const slideSearchBar = () => {

@@ -23,18 +23,64 @@ body {
   overflow-x: hidden;
   position: relative; }
 
-.search-grid-container {
+.search-list {
   width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 2rem;
-  transition: all .5s .5s;
-  align-content: end;
-  align-items: end; }
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+  transition: all .7s .3s; }
+  .search-list__item {
+    list-style: none;
+    display: block;
+    width: 100%;
+    height: 8rem;
+    position: relative;
+    transition: .5s;
+    box-shadow: 1rem 1rem 3rem rgba(211, 211, 211, 0.2); }
+    .search-list__item--front {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: top;
+      transition: transform .5s;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px; }
+      .search-list__item--front svg {
+        width: 65%;
+        height: 65%;
+        fill: #313131; }
+    .search-list__item--back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: bottom;
+      transition: transform .5s;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(254, 218, 11, 0.8);
+      transform: rotateX(90deg) translateY(50%);
+      border-radius: 3px; }
+    .search-list__item:hover .search-list__item--front {
+      transform: rotateX(90deg) translateY(-50%); }
+    .search-list__item:hover .search-list__item--back {
+      transform: rotateX(0deg) translateY(0); }
 
 .search-header {
   display: block;
@@ -57,24 +103,6 @@ body {
     margin: 0 auto;
     height: 2px;
     background-color: var(--color-primary-yellow); }
-
-.search-option {
-  font-size: 2rem;
-  padding: .5rem 1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #e6e3e3;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 3px;
-  transition: all .5s;
-  z-index: 2;
-  cursor: pointer; }
-  .search-option:hover {
-    transform: scale(1.05);
-    background-color: rgba(254, 218, 11, 0.7);
-    box-shadow: 1rem 1rem 3rem black;
-    font-weight: bold; }
 
 .hide {
   opacity: 0;

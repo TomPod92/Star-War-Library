@@ -12,30 +12,67 @@
 
 <body>
     <div class="search-header">Search for a random:</div>
-    <div class="search-grid-container">
-        <div class="search-option search-option--1">film</div>
-        <div class="search-option search-option--2">person</div>
-        <div class="search-option search-option--3">planet</div>
-        <div class="search-option search-option--4">species</div>
-        <div class="search-option search-option--5">starship</div>
-        <div class="search-option search-option--6">vehicle</div>
-    </div>
+    <ul class="search-list">
+        <li class="search-list__item" id= "film">
+            <span class="search-list__item--front">
+                <svg>
+                    <use xlink:href="images/sprite.svg#icon-video-camera"></use>
+                </svg>
+            </span>
 
-    <div class="info-grid-container">
-        <div class="info-item info-item--1"></div>
-        <div class="info-item info-item--2"></div>
-        <div class="info-item info-item--3"></div>
-        <div class="info-item info-item--4"></div>
-        <div class="info-item info-item--5"></div>
-        <div class="info-item info-item--6"></div>
-        <div class="info-item info-item--7"></div>
-        <div class="info-item info-item--8"></div>
-        <div class="info-item info-item--9"></div>
-        <div class="info-item info-item--10"></div>
-        <div class="info-item info-item--11"></div>
-        <div class="info-item info-item--12"></div>
-        <div class="info-item info-item--13"></div>
-    </div>
+            <span class="search-list__item--back">Film</span>
+        </li>
+
+        <li class="search-list__item" id= "person">
+            <span class="search-list__item--front">
+                <svg>
+                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                </svg>
+            </span>
+
+            <span class="search-list__item--back">person</span>
+        </li>
+
+        <li class="search-list__item" id= "planet">
+            <span class="search-list__item--front">
+                <svg>
+                    <use xlink:href="images/sprite.svg#icon-earth"></use>
+                </svg>
+            </span>
+
+            <span class="search-list__item--back">planet</span>
+        </li>
+
+         <li class="search-list__item" id= "species">
+            <span class="search-list__item--front">
+                <svg>
+                    <use xlink:href="images/sprite.svg#icon-users"></use>
+                </svg>
+            </span>
+
+            <span class="search-list__item--back">species</span>
+        </li>
+
+         <li class="search-list__item" id= "starship">
+            <span class="search-list__item--front">
+                <svg>
+                    <use xlink:href="images/sprite.svg#icon-rocket"></use>
+                </svg>
+            </span>
+
+            <span class="search-list__item--back">starship</span>
+        </li>
+
+         <li class="search-list__item" id= "vehicle">
+            <span class="search-list__item--front">
+                <svg>
+                    <use xlink:href="images/sprite.svg#icon-cog"></use>
+                </svg>
+            </span>
+
+            <span class="search-list__item--back">vehicle</span>
+        </li>
+    </ul>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
